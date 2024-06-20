@@ -33,7 +33,7 @@ import CompteErreur from "../pages/erreurPage";
 import MyFavorites from "../pages/MyFavorites.jsx";
 import Avis from "../pages/Avis.jsx";
 import Visitt from "../pages/Visitt.jsx";
-
+import Visittt from "../pages/Visittt.jsx";
 const AppRoutes = () => {
   // eslint-disable-next-line no-unused-vars
   // const { user, status, error } = useSelector((state) => state.user);
@@ -83,6 +83,7 @@ const AppRoutes = () => {
 
         <Route path="/logout" element={<Logout />} />
         <Route path="/houses/:id/visitt" element={<Visitt />} />
+        <Route path="/houses/:id/visittt" element={<Visittt />} />
       </Routes>
     </Router>
   );

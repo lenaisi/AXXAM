@@ -1,3 +1,5 @@
+// HouseDetails.jsx
+
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams, Link } from "react-router-dom";
@@ -15,7 +17,6 @@ import { useSelector } from "react-redux";
 Modal.setAppElement('#root');
 
 const HouseDetails = () => {
-
   const { id } = useParams();
   const [house, setHouse] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -23,7 +24,6 @@ const HouseDetails = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const { currentUser } = useSelector((state) => state.user);
-  
 
   useEffect(() => {
     const fetchHouseDetails = async () => {
@@ -128,24 +128,46 @@ const HouseDetails = () => {
                   <FaImages style={{ marginRight: "5px" }} />
                   Afficher les photos
                 </button>
-                <Link to={`/houses/${id}/visitt`} style={{ textDecoration: "none" }}>
-                  <button
-                    style={{
-                      backgroundColor: "#F27438",
-                      color: "#FFF",
-                      padding: "10px 20px",
-                      border: "none",
-                      borderRadius: "10px",
-                      cursor: "pointer",
-                      display: "flex",
-                      alignItems: "center",
-                      fontSize: "18px"
-                    }}
-                  >
-                    <PiVirtualRealityBold style={{ marginRight: "5px" }} />
-                    Visite 3D
-                  </button>
-                </Link>
+                {/* Condition pour le lien vers Visitt ou Visittt */}
+                {id === "6660f27c3f016aa6df73ca1a" ? (
+                  <Link to={`/houses/${id}/visitt`} style={{ textDecoration: "none" }}>
+                    <button
+                      style={{
+                        backgroundColor: "#F27438",
+                        color: "#FFF",
+                        padding: "10px 20px",
+                        border: "none",
+                        borderRadius: "10px",
+                        cursor: "pointer",
+                        display: "flex",
+                        alignItems: "center",
+                        fontSize: "18px"
+                      }}
+                    >
+                      <PiVirtualRealityBold style={{ marginRight: "5px" }} />
+                      Visite 3D
+                    </button>
+                  </Link>
+                ) : id === "6660f0ba3f016aa6df73c921" ? (
+                  <Link to={`/houses/${id}/visittt`} style={{ textDecoration: "none" }}>
+                    <button
+                      style={{
+                        backgroundColor: "#F27438",
+                        color: "#FFF",
+                        padding: "10px 20px",
+                        border: "none",
+                        borderRadius: "10px",
+                        cursor: "pointer",
+                        display: "flex",
+                        alignItems: "center",
+                        fontSize: "18px"
+                      }}
+                    >
+                      <PiVirtualRealityBold style={{ marginRight: "5px" }} />
+                      Visite 3D
+                    </button>
+                  </Link>
+                ) : null}
               </div>
             </div>
           )}
