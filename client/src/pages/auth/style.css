@@ -1,0 +1,34 @@
+.google-sign-in {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;  
+  }
+  
+  .google-sign-in button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 40px;
+    background-color: #F2F2F2; /* Couleur Google */
+    color: #373737;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 500px;
+    height: 50px;
+  
+  }
+  
+  .google-sign-in button:hover {
+    background-color: #e1e0e0;
+  
+  }
+  
+  .iconeGoogle {
+    margin-left: 5px; 
+  }

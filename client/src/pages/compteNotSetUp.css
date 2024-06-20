@@ -1,0 +1,43 @@
+/* AccountNotFound.css */
+.account-not-found-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .account-not-found {
+    max-width: 400px;
+    padding: 40px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+  }
+  
+  .account-not-found h1 {
+    color: #dc3545;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .account-not-found p {
+    color: #6c757d;
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  
+  .to-signup {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .to-signup:hover {
+    background-color: #0056b3;
+  }
+  
